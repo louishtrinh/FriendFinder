@@ -1,12 +1,12 @@
-var friends = require('../app/data/tableData')
+var quiz = require('../app/data/friends')
 
 module.exports = function (app) {
-  app.get('/api/friends', function (req, res) {
-    res.json(friends)
+  app.get('/api/quiz', function (req, res) {
+    res.json(quiz)
   })
 
-  app.post('/api/friends', function (req, res) {
-    friends.push(req.body)
+  app.post('/api/quiz', function (req, res) {
+    quiz.push(req.body)
     res.json(true)
   })
 
